@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="TouchID&&FaceID">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="秋刀魚的滋味，貓跟你都想了解">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/cat.ico?v=2.10.2">
+
+
+
+<link rel="canonical" href="https://congoliver.github.io/2019/03/19/TouchID&&FaceID/">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.10.2">
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?af911436bf5773470a9aa6b41903cc76";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
+</script>
+
+    <title> TouchID&&FaceID - 秋刀魚的滋味，貓跟你都想了解 </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">秋刀魚的滋味，貓跟你都想了解</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">秋刀魚的滋味，貓跟你都想了解</a>
+</div>
+
+<nav class="site-navbar">
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          TouchID&&FaceID
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2019-03-19
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+
+    <div class="post-content">
+      
+        <blockquote>
+<p>由于接下来的项目需要接触到触控ID以及面容ID支付，发现API调用简单但是支付宝微信等还做了新旧录用信息对比<em>evaluatedPolicyDomainState</em>的逻辑(或许不是这么简单)，so简单封装一下。</p>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">////////// .h file</span><br><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">@interface LocalAuthManager : NSObject</span><br><span class="line">+ (instancetype)sharedInstance;</span><br><span class="line">- (BOOL)isSupportTouchID;</span><br><span class="line">- (BOOL)isSupportFaceID;</span><br><span class="line">- (void)showAuthIDWithDescribe:(NSString *)describe block:(void (BOOL success, NSError * _Nullable error))block;</span><br><span class="line">- (void)setCurrentUserAuthDataWithIdentity:(NSString *)identity;</span><br><span class="line">- (NSData *)currentUserAuthData:(NSString *)identity;</span><br><span class="line">@end</span><br><span class="line">////////.m file</span><br><span class="line">#import &quot;LocalAuthManager.h&quot;</span><br><span class="line">#import &lt;LocalAuthentication/LocalAuthentication.h&gt;</span><br><span class="line">#import &quot;SAMKeychain.h&quot;</span><br><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line"></span><br><span class="line">#define iPhoneX (UIScreen.mainScreen.bounds.size.width &gt;= 375.f &amp;&amp; UIScreen.mainScreen.bounds.size.height &gt;= 812.f)</span><br><span class="line">#define Auth_ID_DATA_SERVICE @&quot;Auth_ID_DATA_SERVICE&quot;</span><br><span class="line"></span><br><span class="line">@implementation LocalAuthManager</span><br><span class="line"></span><br><span class="line">static LocalAuthManager *_instance;</span><br><span class="line"></span><br><span class="line">#pragma mark - 单例</span><br><span class="line">+ (instancetype)sharedInstance &#123;</span><br><span class="line">    static dispatch_once_t onceToken;</span><br><span class="line">    dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">        if (_instance == nil) &#123;</span><br><span class="line">            _instance = [[super allocWithZone:NULL] init];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    return _instance;</span><br><span class="line">&#125;</span><br><span class="line">+(instancetype)allocWithZone:(struct _NSZone *)zone</span><br><span class="line">&#123;</span><br><span class="line">    return [self sharedInstance];</span><br><span class="line">&#125;</span><br><span class="line">-(id)copyWithZone:(NSZone *)zone</span><br><span class="line">&#123;</span><br><span class="line">    return _instance;</span><br><span class="line">&#125;</span><br><span class="line">-(id)mutableCopyWithZone:(NSZone *)zone</span><br><span class="line">&#123;</span><br><span class="line">    return _instance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#pragma mark - 判断是否支持触控ID</span><br><span class="line">- (BOOL)isSupportTouchID&#123;</span><br><span class="line">    LAContext *laContext = [[LAContext alloc] init];</span><br><span class="line">    NSError *error = nil;</span><br><span class="line">    //LAPolicyDeviceOwnerAuthenticationWithBiometrics判断TouchID和FaceID</span><br><span class="line">    [laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error];</span><br><span class="line">    if (error.code == LAErrorTouchIDNotAvailable)</span><br><span class="line">        return NO;</span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 判断是否支持面容ID</span><br><span class="line">- (BOOL)isSupportFaceID&#123;</span><br><span class="line">    if (iPhoneX &amp;&amp; [UIDevice currentDevice].systemVersion.doubleValue &gt;= 11.0)</span><br><span class="line">        return YES;</span><br><span class="line">    return NO;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 显示验证</span><br><span class="line">- (void)showAuthIDWithDescribe:(NSString *)describe block:(void (BOOL success, NSError * _Nullable error))block&#123;</span><br><span class="line">    if (!describe) &#123;</span><br><span class="line">        if (iPhoneX) &#123;</span><br><span class="line">            describe = @&quot;验证已有面容&quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            describe = @&quot;通过Home键验证已有指纹&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    if (NSFoundationVersionNumber &lt; NSFoundationVersionNumber_iOS_8_0) &#123;</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            NSLog(@&quot;系统版本低于8.0&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    LAContext *context = [[LAContext alloc] init];</span><br><span class="line">    NSError *error;</span><br><span class="line">    context.localizedFallbackTitle = @&quot;输入密码&quot;;</span><br><span class="line">    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) &#123;</span><br><span class="line">        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:describe reply:^(BOOL success, NSError * _Nullable error) &#123;</span><br><span class="line">            block(success,error);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            NSLog(@&quot;当前设备不支持TouchID/FaceID&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 根据当前用户标识的保存TouchID/FaceID信息</span><br><span class="line">- (void)setCurrentUserAuthDataWithIdentity:(NSString *)identity &#123;</span><br><span class="line">    LAContext *context = [[LAContext alloc] init];</span><br><span class="line">    NSError *error;</span><br><span class="line">    if (![context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) &#123;</span><br><span class="line">        NSLog(@&quot;save authe error:%@&quot;,error);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if (identity &amp;&amp; context.evaluatedPolicyDomainState) &#123;</span><br><span class="line">        [SAMKeychain setPasswordData:context.evaluatedPolicyDomainState forService:Auth_ID_DATA_SERVICE account:identity error:&amp;error];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 根据当前用户标识的获取TouchID/FaceID信息</span><br><span class="line">- (NSData *)currentUserAuthData:(NSString *)identity &#123;</span><br><span class="line">    return [SAMKeychain passwordDataForService:Auth_ID_DATA_SERVICE account:identity];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">typedef NS_ENUM(NSInteger, LAError)</span><br><span class="line">&#123;</span><br><span class="line">    LAErrorAuthenticationFailed,   // 验证信息出错</span><br><span class="line">    LAErrorUserCancel              // 用户取消了验证</span><br><span class="line">    LAErrorUserFallback            // 用户点击了手动输入密码的按钮</span><br><span class="line">    LAErrorSystemCancel            // 被系统取消，就是说你现在进入别的应用了，不在刚刚那个页面，所以没法验证</span><br><span class="line">    LAErrorPasscodeNotSet          // 用户没有设置文本密码</span><br><span class="line">    LAErrorTouchIDNotAvailable     // 用户设备不支持TouchID</span><br><span class="line">    LAErrorTouchIDNotEnrolled      // 用户没有设置手指指纹</span><br><span class="line">    LAErrorTouchIDLockout          // 用户错误次数被锁了</span><br><span class="line">    LAErrorAppCancel               // 在验证中被其他app中断</span><br><span class="line">    LAErrorInvalidContext          // 请求验证出错</span><br><span class="line">    LAErrorBiometryNotAvailable    // 多次验证(T&amp;F二者)失败被锁定</span><br><span class="line">    LAErrorBiometryNotEnrolled     // 用户没有设置触控ID、面容ID</span><br><span class="line">    LAErrorBiometryLockout         // 触控ID、面容ID被锁了</span><br><span class="line">    LAErrorNotInteractive          // 验证失败，使用了禁止UI</span><br><span class="line">&#125; NS_ENUM_AVAILABLE(10_10, 8_0) __WATCHOS_AVAILABLE(3.0) __TVOS_AVAILABLE(10.0);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>thanks for your reading~  </p>
+</blockquote>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="https://congoliver.github.io">congoliver</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="https://congoliver.github.io/2019/03/19/TouchID&&FaceID/">https://congoliver.github.io/2019/03/19/TouchID&&FaceID/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2019/03/22/scoped_model/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">scoped_model</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2019/03/08/Flutter网络请求与JSON/">
+        <span class="next-text nav-default">Flutter网络请求与JSON</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:1010576186@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+
+<!-- 音频播放 -->
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2019
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">congoliver</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.10.2"></script>
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>

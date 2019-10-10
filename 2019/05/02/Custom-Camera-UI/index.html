@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+<meta name="theme-color" content="#f8f5ec">
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="Custom-Camera-UI">
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="秋刀魚的滋味，貓跟你都想了解">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/cat.ico?v=2.10.2">
+
+
+
+<link rel="canonical" href="https://congoliver.github.io/2019/05/02/Custom-Camera-UI/">
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css">
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css">
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.10.2">
+
+
+
+  
+  <script id="baidu_analytics">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?af911436bf5773470a9aa6b41903cc76";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+  window.config = {"leancloud":{"app_id":null,"app_key":null},"toc":true,"fancybox":true,"pjax":true};
+</script>
+
+    <title> Custom-Camera-UI - 秋刀魚的滋味，貓跟你都想了解 </title>
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/." class="logo">秋刀魚的滋味，貓跟你都想了解</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">秋刀魚的滋味，貓跟你都想了解</a>
+</div>
+
+<nav class="site-navbar">
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Custom-Camera-UI
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2019-05-02
+        </span>
+        
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Steps"><span class="toc-text">Steps</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Custom-Camera-UI"><span class="toc-text">Custom-Camera-UI</span></a></li></ol>
+    </div>
+  </div>
+
+
+
+    <div class="post-content">
+      
+        <blockquote>
+<p>应用中构建自定义相机UI捕获媒体需要用到<a href="https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture?language=objc#overview" target="_blank" rel="noopener">AVFoundation Capture</a><br>应用中调用系统相机UI捕获媒体则用到 <a href="https://developer.apple.com/documentation/uikit/uiimagepickercontroller?language=objc" target="_blank" rel="noopener">UIImagePickerController</a></p>
+</blockquote>
+<a id="more"></a>
+<p><img src="/2019/05/02/Custom-Camera-UI/Capture.png" alt=""></p>
+<h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><blockquote>
+<p>捕获体系结构的主要部分是会话，输入和输出：捕获会话将一个或多个输入连接到一个或多个输出。输入是媒体源，包括内置于iOS设备或Mac中的摄像头和麦克风等捕获设备。输出从输入获取媒体以产生有用的数据，例如写入磁盘的电影文件或可用于实时处理的原始像素缓冲区。  </p>
+<ul>
+<li>检查授权<a href="https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/requesting_authorization_for_media_capture_on_ios?language=objc" target="_blank" rel="noopener">Requesting Authorization for Media Capture</a></li>
+<li>创建媒体捕捉会话</li>
+<li>创建媒体输入并添加入捕捉会话</li>
+<li>创建媒体输出并添加入捕捉会话</li>
+<li>创建媒体预览视图，并设置其会话</li>
+<li>捕捉会话开始工作</li>
+<li>调用输出API进行拍摄<br>ps—设置媒体输入&amp;输出&amp;媒体预览视图时可根据需求初始化相关基本设置，e.g.前后置镜头&amp;前置摄像头镜像翻转&amp;视频重力</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="Custom-Camera-UI"><a href="#Custom-Camera-UI" class="headerlink" title="Custom-Camera-UI"></a>Custom-Camera-UI</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">#import &lt;AVFoundation/AVFoundation.h&gt;</span><br><span class="line">@interface ZBPreview : UIView</span><br><span class="line">@property (nonatomic, readonly) AVCaptureVideoPreviewLayer *videoPreviewLayer;</span><br><span class="line">@property (nonatomic, strong) AVCaptureSession *captureSession;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">#import &quot;ZBPreview.h&quot;</span><br><span class="line">@implementation ZBPreview</span><br><span class="line">- (void)awakeFromNib &#123;</span><br><span class="line">    [super awakeFromNib];</span><br><span class="line">	   //保留视频的宽高比并填充图层的边界</span><br><span class="line">    [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (instancetype)initWithFrame:(CGRect)frame &#123;</span><br><span class="line">    if (self = [super initWithFrame:frame]) &#123;</span><br><span class="line">        [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];</span><br><span class="line">    &#125;</span><br><span class="line">    return self;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (Class)layerClass &#123;</span><br><span class="line">    return [AVCaptureVideoPreviewLayer class];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (AVCaptureVideoPreviewLayer*)videoPreviewLayer &#123;</span><br><span class="line">    return (AVCaptureVideoPreviewLayer *)self.layer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (AVCaptureSession*)captureSession &#123;</span><br><span class="line">    return self.videoPreviewLayer.session;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)setCaptureSession:(AVCaptureSession*)captureSession &#123;</span><br><span class="line">    self.videoPreviewLayer.session = captureSession;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">#import &quot;ZBPreview.h&quot;</span><br><span class="line">@class ZBOverlayView;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@protocol ZBOverlayViewDelegate &lt;NSObject&gt;</span><br><span class="line">@optional</span><br><span class="line">- (void)overlayViewActionTakePicture:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionClickedAlbum:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionCancelCamera:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionSwitchCamera:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionExitCamera:(ZBOverlayView *)overlayView;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">//相机UI视图</span><br><span class="line">@interface ZBOverlayView : UIView</span><br><span class="line">///预览相机视图</span><br><span class="line">@property (weak, nonatomic) IBOutlet ZBPreview *previewView;</span><br><span class="line">///拍摄图片视图</span><br><span class="line">@property (weak, nonatomic) IBOutlet UIImageView *previewPicture;</span><br><span class="line">///UI操作代理</span><br><span class="line">@property (nonatomic, weak) id&lt;ZBOverlayViewDelegate&gt; delegate;</span><br><span class="line">+ (instancetype)cameraView;</span><br><span class="line">- (UIView *)targetView;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#import &quot;ZBOverlayView.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation ZBOverlayView</span><br><span class="line"></span><br><span class="line">+ (instancetype)cameraView &#123;</span><br><span class="line">    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;</span><br><span class="line">&#125;</span><br><span class="line">//放置拍摄显示照片</span><br><span class="line">- (UIView *)targetView &#123;</span><br><span class="line">    return nil;</span><br><span class="line">&#125;</span><br><span class="line">//返回</span><br><span class="line">- (IBAction)backButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionExitCamera:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionExitCamera:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//拍摄</span><br><span class="line">- (IBAction)takeButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionTakePicture:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionTakePicture:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//取消</span><br><span class="line">- (IBAction)cancelButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionCancelCamera:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionCancelCamera:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//相册</span><br><span class="line">- (IBAction)doneButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionClickedAlbum:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionClickedAlbum:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//切换镜头</span><br><span class="line">- (IBAction)positionButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionSwitchCamera:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionSwitchCamera:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>via-<a href="https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/avcam_building_a_camera_app?language=objc" target="_blank" rel="noopener">AVCam: Building a Camera App</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>原文作者: </span>
+      <a href="https://congoliver.github.io">congoliver</a>
+    </p>
+    <p class="copyright-item">
+      <span>原文链接: </span>
+      <a href="https://congoliver.github.io/2019/05/02/Custom-Camera-UI/">https://congoliver.github.io/2019/05/02/Custom-Camera-UI/</a>
+    </p>
+    <p class="copyright-item">
+      <span>许可协议: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2019/05/06/Hexo+APlayer/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Hexo+APlayer</span>
+        <span class="prev-text nav-mobile">上一篇</span>
+      </a>
+    
+    
+      <a class="next" href="/2019/04/16/Storyboard&Xib/">
+        <span class="next-text nav-default">Storyboard&Xib</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:1010576186@qq.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+
+<!-- 音频播放 -->
+  <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script>
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://hexo.io/">Hexo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2019
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">congoliver</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.10.2"></script>
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body>
+</html>

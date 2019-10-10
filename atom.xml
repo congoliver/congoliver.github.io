@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>秋刀魚的滋味，貓跟你都想了解</title>
+  
+  <subtitle>秋刀魚的滋味，貓跟你都想了解</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://congoliver.github.io/"/>
+  <updated>2019-09-30T09:47:04.149Z</updated>
+  <id>https://congoliver.github.io/</id>
+  
+  <author>
+    <name>congoliver</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DNS</title>
+    <link href="https://congoliver.github.io/2019/09/16/DNS/"/>
+    <id>https://congoliver.github.io/2019/09/16/DNS/</id>
+    <published>2019-09-16T06:25:21.000Z</published>
+    <updated>2019-09-30T09:47:04.149Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>域名系统</strong>（英语：<strong>D</strong>omain<strong>N</strong>ame<strong>S</strong>ystem，缩写：<strong>DNS</strong>）是互联网的一项服务。它作为将 <a href="https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D" target="_blank" rel="noopener">域名</a> 和 <a href="https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80" target="_blank" rel="noopener">IP地址</a> 相互映射的一个 分布式数据库，能够使人更方便地访问 互联网。<br><a id="more"></a> </p></blockquote><hr><ul><li><strong>运营商DNS</strong> 互联网运营商给用户下发的DNS服务器</li><li><strong>公共DNS</strong> 大公司或非赢利组织搭建的DNS服务器</li><li><strong>DNS over HTTPS</strong> (<strong>DoH</strong>)和 <strong>DNS over TLS</strong> (<strong>DoT</strong>)  分别利用 HTTPS （ <a href="https://baike.baidu.com/item/%25E8%25B6%2585%25E6%2596%2587%25E6%259C%25AC%25E4%25BC%25A0%25E8%25BE%2593%25E5%25AE%2589%25E5%2585%25A8%25E5%258D%258F%25E8%25AE%25AE" target="_blank" rel="noopener">超文本传输安全协议</a> ）和 TLS（ <a href="https://baike.baidu.com/item/%25E4%25BC%25A0%25E8%25BE%2593%25E5%25B1%2582%25E5%25AE%2589%25E5%2585%25A8%25E5%258D%258F%25E8%25AE%25AE" target="_blank" rel="noopener">传输层安全协议</a> ）这两种行业通用的安全协议，将我们的 DNS 请求加密发往 DNS 服务器</li></ul><hr><p><strong>推荐的公共DNS</strong>(主辅)</p><ul><li>腾讯          119.29.29.29         119.28.28.28</li><li>阿里云      223.5.5.5                 223.6.6.6</li><li>南京信风  114.114.114.114  114.114.115.115</li><li>Google     8.8.8.8                     8.8.4.4</li><li>Cisco         208.67.222.222     208.67.220.220</li><li>Cloudfare 1.1.1.1                     1.0.0.1</li></ul><hr><p><strong>DoH</strong>&amp;<strong>Dot</strong>在终端上的使用</p><ul><li><strong>iOS</strong>  <strong>Adguard</strong> -<em>DNS隐私</em>-<em>Cloudflare DNS</em></li><li><strong>Android</strong>  <strong>设置</strong>-指定加密DNS&amp; <strong>Intra</strong>-<em>DNS over HTTPS</em>&amp;<strong>Adguard</strong></li><li><strong>Mac&amp;Windows</strong> <strong>Firefox</strong>-<em>常规-网络设置-设置，选择启用基于 HTTPS 的 DNS</em></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;域名系统&lt;/strong&gt;（英语：&lt;strong&gt;D&lt;/strong&gt;omain&lt;strong&gt;N&lt;/strong&gt;ame&lt;strong&gt;S&lt;/strong&gt;ystem，缩写：&lt;strong&gt;DNS&lt;/strong&gt;）是互联网的一项服务。它作为将 &lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;域名&lt;/a&gt; 和 &lt;a href=&quot;https://zh.wikipedia.org/wiki/IP%E5%9C%B0%E5%9D%80&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;IP地址&lt;/a&gt; 相互映射的一个 分布式数据库，能够使人更方便地访问 互联网。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>DarkMode</title>
+    <link href="https://congoliver.github.io/2019/09/12/DarkMode/"/>
+    <id>https://congoliver.github.io/2019/09/12/DarkMode/</id>
+    <published>2019-09-12T06:25:21.000Z</published>
+    <updated>2019-10-10T05:34:50.760Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>判断当前模式<code>UITraitCollection.current.userInterfaceStyle</code></li><li>在<code>Assets.xcassets</code>中为图片和颜色设置<code>Appearance</code>属性在Any或Dark或Light模式下的状态，另外也可系统提供的system开头颜色</li><li>模糊视图通过<code>systemMaterial</code>样式的<code>UIBlurEffect</code>初始化</li><li>遵循<code>UITraitEnvironment</code>协议监听模式切换</li><li>使用<code>overrideUserInterfaceStyle</code>指定当前控制器始终处于某种模式</li><li>浅色系APP比较适合适配暗黑模式，若不适配需要在<code>Plist</code>注明<code>User Interface Style</code>字段为<code>Light</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;判断当前模式&lt;code&gt;UITraitCollection.current.userInterfaceStyle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;Assets.xcassets&lt;/code&gt;中为图片和颜色设置&lt;code&gt;Appearance&lt;/co
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mark-Tools</title>
+    <link href="https://congoliver.github.io/2019/08/28/Mark-Tools/"/>
+    <id>https://congoliver.github.io/2019/08/28/Mark-Tools/</id>
+    <published>2019-08-28T06:25:21.000Z</published>
+    <updated>2019-09-05T06:12:00.806Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://www.dogedoge.com" target="_blank" rel="noopener">多吉搜索</a></li><li><a href="https://mijisou.com" target="_blank" rel="noopener">秘迹搜索</a></li><li><a href="https://www.extfans.com" target="_blank" rel="noopener">谷歌插件</a></li><li><a href="https://icon.wuruihong.com/" target="_blank" rel="noopener">移动应用图标</a></li><li><a href="http://s.kxapp.com/index.php" target="_blank" rel="noopener">开心签名工具</a></li><li><a href="http://fjisu.tv" target="_blank" rel="noopener">飞极速在线</a></li><li><a href="http://ifkdy.com" target="_blank" rel="noopener">疯狂影视搜索</a></li><li><a href="http://ddrk.me" target="_blank" rel="noopener">低端影视</a></li><li><a href="https://www.5gkp.top" target="_blank" rel="noopener">5星影视</a></li><li><a href="http://www.zxzjs.com" target="_blank" rel="noopener">在线之家</a></li><li><a href="http://m.meijuxia.com" target="_blank" rel="noopener">美剧侠</a></li><li><a href="http://cn.gimy.tv" target="_blank" rel="noopener">GimyTV剧迷</a></li><li><a href="http://www.huihev.com" target="_blank" rel="noopener">绘盒视频</a></li><li><a href="https://www.gamewallpapers.com" target="_blank" rel="noopener">GameWallpapers.com</a></li><li><a href="https://unsplash.com/t/wallpapers" target="_blank" rel="noopener">Wallpapers | Unsplash</a></li><li><a href="https://wallhaven.cc" target="_blank" rel="noopener">Awesome Wallpapers</a></li><li><a href="https://www.pexels.com" target="_blank" rel="noopener">Free stock photos · Pexels</a></li><li><a href="http://www.jiaoran.net" target="_blank" rel="noopener">皎然影音乐</a></li><li><a href="https://pan-light.peterq.cn" target="_blank" rel="noopener">pan-light</a></li><li><a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">PicGo图床</a></li><li><a href="https://github.com/gee1k/uPic" target="_blank" rel="noopener">uPic图床</a></li><li><a href="https://zh.pixfix.com" target="_blank" rel="noopener">搞定杂乱像素 - Pix Fix</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dogedoge.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;多吉搜索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mijisou.com&quot; target=&quot;_blank&quot; r
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Regex-Meta-Character</title>
+    <link href="https://congoliver.github.io/2019/08/14/Regex-Meta-Character/"/>
+    <id>https://congoliver.github.io/2019/08/14/Regex-Meta-Character/</id>
+    <published>2019-08-14T06:25:21.000Z</published>
+    <updated>2019-08-24T06:06:18.390Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>[]表示单个字符的原子表</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[aoeiu] 表示任意一个元音字母</span><br><span class="line">[0-9] 表示任意一位数字等价于 \d</span><br><span class="line">[0-9][0-9] 00~99</span><br><span class="line">[a-z][0-9]表示小写字和一位数字构成的两位字符</span><br><span class="line">[a-zA-Z0-9_] 表示任意一位大小字母或数字 \w</span><br></pre></td></tr></table></figure><ul><li>[^]表示除中括号内原子之外的任何字符 是[]的取反</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[^0-9] 表示任意一位非数字字符 等价于 \D</span><br><span class="line">[^a-z] 表示任意一位非小写字母</span><br></pre></td></tr></table></figure><ul><li>{m}表示对前面原子的数量控制，表示是m次</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[0-9]&#123;4&#125; 表示4位数字0000-9999 等价于\d&#123;4&#125;</span><br><span class="line">[1][3-8][0-9]&#123;9&#125; 手机号码</span><br></pre></td></tr></table></figure><ul><li>{m,}表示对前面原子的数量控制，表示是至少m次</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[0-9]&#123;2,&#125; 表示两位及以上的数字 等价于\d&#123;2,&#125;</span><br></pre></td></tr></table></figure><ul><li>{m,n}表示对前面原子的数量控制，表示是m到n次</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[a-z]&#123;6,8&#125; 表示6到8位的小写字母</span><br></pre></td></tr></table></figure><ul><li>*表示对前面原子的数量控制，表示是任意次，等价于<code>{0,}</code></li><li>+表示对前面原子的数量控制，表示至少1次，等价于<code>{1,}</code></li><li>?表示对前面原子的数量控制，表示0次或1次（可有可无） 等价于<code>{0,1}</code></li><li>()表示一个整体原子，还有一个子存储单元的作用 e.g. <code>(red)</code> 表示字串red</li><li>|表示或的意思 <code>(red|blue)</code> 字串red或blue</li><li>^用在正则单元块的开头处，表示必须以指定的开头</li><li>$用在正则单元块的结尾处，表示必须以指定的结尾</li><li>.表示任意一个除换行符之外的字符 常用组合： <code>.*?</code> 或 <code>.+?</code> 表示最小匹配所有字符</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;[]表示单个字符的原子表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cla
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Grammar</title>
+    <link href="https://congoliver.github.io/2019/08/06/Grammar/"/>
+    <id>https://congoliver.github.io/2019/08/06/Grammar/</id>
+    <published>2019-08-06T02:25:21.000Z</published>
+    <updated>2019-08-06T02:56:45.077Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2019/08/06/Grammar/Grammar.png" alt="Grammar"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2019/08/06/Grammar/Grammar.png&quot; alt=&quot;Grammar&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SuperSignature</title>
+    <link href="https://congoliver.github.io/2019/07/17/SuperSignature/"/>
+    <id>https://congoliver.github.io/2019/07/17/SuperSignature/</id>
+    <published>2019-07-17T06:25:21.000Z</published>
+    <updated>2019-07-17T05:42:26.679Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>获取UDID <a href="https://github.com/shaojiankui/iOS-UDID-Safari" target="_blank" rel="noopener">Use safari and mobileconfig get  ios device real udid</a></li><li>将UDID写入开发者后台<a href="https://github.com/iizvv/its/blob/master/itsUtils.py" target="_blank" rel="noopener">itsUtils.py</a> or <a href="https://congoliver.github.io/2019/05/23/Spaceship/">Spaceship</a></li><li>将带有UDID的测试证书写入到IPA<a href="https://www.jianshu.com/p/207f120df01f" target="_blank" rel="noopener">网页安装ipa</a></li><li>将重签名IPA替换旧包并跳转</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;获取UDID &lt;a href=&quot;https://github.com/shaojiankui/iOS-UDID-Safari&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Use safari and mobileconfig get  ios
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Python in Sublime</title>
+    <link href="https://congoliver.github.io/2019/07/12/Python%20in%20Sublime/"/>
+    <id>https://congoliver.github.io/2019/07/12/Python in Sublime/</id>
+    <published>2019-07-12T01:13:21.000Z</published>
+    <updated>2019-07-13T01:59:06.036Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://www.python.org" target="_blank" rel="noopener">Install Python3<contain pip3=""></contain></a></li><li><a href="https://www.sublimetext.com/3" target="_blank" rel="noopener">Install Sublime3</a></li><li><a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">Install Package Control in Sublime3</a></li><li>Switch Python3 as default version: edit config file <strong>~/.bash_profile</strong>  add a line:<code>alias python=&quot;/usr/local/bin/python3&quot;</code>and then <code>source ~/.bash_profile</code>  save configuration.</li><li>Install Scrapy <code>pip3 install Scrapy</code> and create link <code>ln -s /Library/Frameworks/Python.framework/Versions/3.7/bin/scrapy /usr/local/bin/scrapy</code><a id="more"></a></li></ul><hr><figure class="highlight plain"><figcaption><span>Usage</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">o  加一行</span><br><span class="line">dd 删除当前行</span><br><span class="line">i  编辑模式</span><br><span class="line">ESC 退出编辑模式</span><br><span class="line">:  命令模式  wq保存退出</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.python.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Install Python3&lt;contain pip3=&quot;&quot;&gt;&lt;/contain&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sublimetext.com/3&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Install Sublime3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://packagecontrol.io/installation&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Install Package Control in Sublime3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Switch Python3 as default version: edit config file &lt;strong&gt;~/.bash_profile&lt;/strong&gt;  add a line:&lt;code&gt;alias python=&amp;quot;/usr/local/bin/python3&amp;quot;&lt;/code&gt;and then &lt;code&gt;source ~/.bash_profile&lt;/code&gt;  save configuration.&lt;/li&gt;
+&lt;li&gt;Install Scrapy &lt;code&gt;pip3 install Scrapy&lt;/code&gt; and create link &lt;code&gt;ln -s /Library/Frameworks/Python.framework/Versions/3.7/bin/scrapy /usr/local/bin/scrapy&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Sauce</title>
+    <link href="https://congoliver.github.io/2019/07/10/Sauce/"/>
+    <id>https://congoliver.github.io/2019/07/10/Sauce/</id>
+    <published>2019-07-10T06:25:21.000Z</published>
+    <updated>2019-08-22T08:21:56.286Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>焗蜗牛、龙虾汤、勃艮第牛肉，这些华丽的菜色让法餐在人们心里留下高大上的印象。然而，法餐真正的风情是通过浓厚醇美，情意绵绵的调味汁展现的。万变不离其宗的五种基础调味汁又称作五大母酱（mother sauces)，是法国菜的灵魂，而它们的制作其实并不复杂。<br><a id="more"></a>  </p></blockquote><hr><ul><li>白酱（white sauce）<br>中火融化2大匙黄油；<br>加入两大匙面粉。不论做几人份的量，面粉和黄油的比例都应对等；<br>小火慢炖，不停搅动直到面糊转为蜜色； 缓缓加入一杯牛奶，同时搅拌均匀。牛奶要一点一点的倒入，否则容易结块；<br>关掉炉火，适量加入盐和胡椒粉；<br>煮好的白协眉沙司可以适口味加入月桂叶，胡椒子，小葱头等香料调 味。</li><li>天鹅绒酱（veloute sauce）<br>中火融化2大匙黄油并筛入面粉，搅拌至金黄。一定要不停搅拌不然会糊掉；<br>缓缓加入高汤(1杯白高汤可以由鸡肉，鱼熬制而成)，搅匀直至顺滑；<br>小火煮五分钟，搅拌避免结块；<br>尝一下，天鹅绒酱一定是浓稠顺滑、入口轻浮的，不能有生面粉味哦。</li><li>褐酱（espagnole sauce）<br>中火融化2大匙黄油 ，加入两大匙面粉。搅拌直到面糊转为巧克力色，关掉炉火，利用余温继续搅拌；<br>等待面糊晾凉，缓缓加入烤牛肉高汤，搅拌至顺滑；<br>倒入炒软的胡萝卜和西芹丁；<br>加入番茄沙司，小火炖煮半个钟头直到沙司浓缩至一半。</li><li>红酱（tomato sauce）<br>洋葱、蒜切碎炒熟；<br>两只番茄切碎，或倒入一罐番茄沙司；<br>倒入白酒醋，糖，盐，胡椒；<br>加一杯水，慢火炖1个钟头直到沙司变得浓稠。</li><li>荷兰酱（hollandaise sauce）<br>将蛋黄，柠檬汁和盐充分混合（最好使用电动搅拌器）；<br>缓缓注入融化的热黄油，同时搅拌；<br>将原料置于锅中小火隔水煮，搅拌至顺滑。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;焗蜗牛、龙虾汤、勃艮第牛肉，这些华丽的菜色让法餐在人们心里留下高大上的印象。然而，法餐真正的风情是通过浓厚醇美，情意绵绵的调味汁展现的。万变不离其宗的五种基础调味汁又称作五大母酱（mother sauces)，是法国菜的灵魂，而它们的制作其实并不复杂。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Whatever will be, will be</title>
+    <link href="https://congoliver.github.io/2019/07/01/Whatever%20will%20be,%20will%20be/"/>
+    <id>https://congoliver.github.io/2019/07/01/Whatever will be, will be/</id>
+    <published>2019-07-01T04:18:21.000Z</published>
+    <updated>2019-07-11T02:33:11.135Z</updated>
+    
+    <content type="html"><![CDATA[<p>College student Orange’s recent small goal is to buy the latest iPhone in installments, which will make her feel that she is the most awkward girl in the bedroom. Colleague Mango wants to enter a well-known sports car before the end of the year because he knows he can’t afford a line. The existence of the sports car can make him better in the nightclub sisters, leading the bananas to buy a house in the East Third Ring Road, but the development of the company and the school of the baby are like two big stones, which makes him breathless. The boss of the listed company dreams of staggering with the more senior wealthy businessmen, and is annoyed that they do not know how to deal with these elites. The desire of the top wealthy businessmen and politicians is to make their family industry evergreen, and they will not be lost for generations. joke.<br><a id="more"></a><br>The uncles of the college students’ oranges are proud of their prostitutes. Everyone praises their niece for a long time. It is the only dawn and hope of the whole village. The mother’s flower roll of Mango’s far away can only be seen on New Year’s Eve. The son once, but she felt that she was able to cultivate a baby who could be alone in the big company. She was proud enough. The children of the same age in the square dance, who knows more about mango? Banana’s daughter-in-law peaches always persuade her husband to pay attention to the body. It is important for a family to be healthy and healthy than to earn money. Rich businessmen and politicians talk and laugh at major speeches and encourage young people to pursue their dreams. But what young people don’t know is that A few months later, someone was jailed.</p><p>In fact, the real imprisonment of a young person is often not a success, but a self.<br>It is the back-and-forth confrontation between inner desire and individual ability. It is the final reconciliation of secular values ​​and self-exploration. It is a proposition that you need to spend a lifetime to enlighten.<br>A teenager who once wanted to squander Fang Fang on Wall Street, and later worked as an accountant in a small county institution, a girl who stayed up late in the serious literary world, and later became a housewife who occasionally gave poems to the laundry for cooking and cooking. Most people This is true for a lifetime. You said that he did not achieve his dreams, but you looked at him and his family, lucky laughter and self-satisfaction. Why do you deny their value?</p><p>Our young generation, including myself, always has a very good attitude. Life is not the life you want, you are not the one you want to be. But if you really want to think about it, most of these unhappiness seems to be unnecessary. For example, the expectations of parents, the pressure of relatives and friends, and the comparison with others that are unnecessary.<br>A few days ago, I saw a teacher from the Iraqi war correspondent, Ante, at a banquet. The words he said gave me a deep impression. The general idea is: If you feel that you have worked hard, it is still very hard, so let Relax yourself, let go of yourself, not your attitude is a problem, but your strategy.</p><p>I think so. In this world, there are always people who tell you to work harder, to be faster, or else you will not be able to catch up with others and you will be eliminated. But no one has ever told you, where is the effort to be a head? I’m almost halfway to work hard, can’t I stop doing it? The way I work hard must be the same as everyone else? nobody. Because they don’t know you, don’t know what you want, they won’t let you know about yourself. Over time, you forget who you are and what you want to do.</p><p>The Temple of Apollo in the ancient Greek city of Delphi is engraved with seven profound words: <em>Man, know yourself. </em> Socrates is “self-awareness” as his own research. Because of this, it has never been an easy task. This is a process that requires constant refreshing of cognition and trial and error. It requires a lot of reflection, practice, observation and thinking. If you have never known yourself and don’t know what you want, then even if you have achieved the success of the secular definition, you can’t live your own way.<br>Anything you want to give to a young man who has nothing to do? What I want to say is: Nothing in my opinion is a false proposition.</p><p>Don’t listen to the sound of wearing forest leaves, you just take your way, this road may have doubts, pain and deviation, but you don’t panic, this is a necessity of practice. Don’t let the eyes of outsiders become your tie, and don’t let the definition of the world become your burden. Of course, I don’t mean that you have to be independent. You should be able to get along with them. Just you have to know that these should not be the weight of your value. We have all been eager to return home, and we have seen Changan flowers in one day. In the end, we discovered the greatest achievement. It is nothing more than living in the heart.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;College student Orange’s recent small goal is to buy the latest iPhone in installments, which will make her feel that she is the most awkward girl in the bedroom. Colleague Mango wants to enter a well-known sports car before the end of the year because he knows he can’t afford a line. The existence of the sports car can make him better in the nightclub sisters, leading the bananas to buy a house in the East Third Ring Road, but the development of the company and the school of the baby are like two big stones, which makes him breathless. The boss of the listed company dreams of staggering with the more senior wealthy businessmen, and is annoyed that they do not know how to deal with these elites. The desire of the top wealthy businessmen and politicians is to make their family industry evergreen, and they will not be lost for generations. joke.&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Find-Tools</title>
+    <link href="https://congoliver.github.io/2019/06/10/Find-Tools/"/>
+    <id>https://congoliver.github.io/2019/06/10/Find-Tools/</id>
+    <published>2019-06-10T06:25:21.000Z</published>
+    <updated>2019-09-12T06:16:06.406Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://miku.tools" target="_blank" rel="noopener">MikuTools - 一个轻量的工具集合</a></li><li><a href="https://www.toolfk.com" target="_blank" rel="noopener">ToolFk程序员在线开发工具集合</a> </li><li><a href="https://cn.eagle.cool" target="_blank" rel="noopener">Eagle - 设计师图片管理工具</a></li><li><a href="https://geekdocs.cn" target="_blank" rel="noopener">程序员导航</a></li><li><a href="https://www.fosshub.com" target="_blank" rel="noopener">FOSSHUB</a></li><li><a href="https://dh.woshipm.com/#section-1" target="_blank" rel="noopener">阿猫阿狗导航</a></li><li><a href="https://dynamicwallpaper.club" target="_blank" rel="noopener">MAC动态壁纸</a></li><li><a href="https://www.91sotu.com" target="_blank" rel="noopener">搜图导航 - 一款强大且智能的设计师导航</a></li><li><a href="https://www.remove.bg" target="_blank" rel="noopener">Remove Background from Image – remove.bg</a> 在线抠图</li><li><a href="https://iconscout.com/icon-editor/" target="_blank" rel="noopener">Online Free Icon Editor by Iconscout</a> 在线图标</li><li><a href="https://imagefinder.co" target="_blank" rel="noopener">Image Finder - High quality free stock images</a> 可商用图片</li><li><a href="https://search.muz.li" target="_blank" rel="noopener">Search by Muzli</a> 素材搜索</li><li><a href="https://sketch-to-web.com/" target="_blank" rel="noopener">Sketch To Web</a>  </li><li><a href="http://edit.foxitcloud.cn/" target="_blank" rel="noopener">福昕云编辑</a></li><li><a href="https://www.ilovepdf.com" target="_blank" rel="noopener">iLovePDF | Online PDF tools for PDF lovers</a></li><li><a href="https://www.iloveimg.com" target="_blank" rel="noopener">iLoveIMG | The fastest free web app for easy image modification.</a></li><li><a href="https://chanind.github.io/hanzi-writer/" target="_blank" rel="noopener">Hanzi Writer - 演示汉字笔画顺序的 JS 库</a></li><li><a href="https://kindle.51nazhun.pub/" target="_blank" rel="noopener">Kindle电子书分享</a></li><li><a href="https://github.com/wangyasai/PerlinNoisePainter" target="_blank" rel="noopener">PerlinNoisePainter - 特效图制作</a></li><li><a href="https://www.photopea.com/" target="_blank" rel="noopener">在线PS</a></li><li><a href="https://www.launchaco.com" target="_blank" rel="noopener">Startup Website Builder - Launchaco</a></li><li><a href="https://www.cnswift.org" target="_blank" rel="noopener">Swift 编程语言 – 可能是最用心的翻译</a></li><li><a href="http://24mail.chacuo.net/" target="_blank" rel="noopener">临时邮箱</a></li><li><a href="https://www.deepnude.com" target="_blank" rel="noopener">AI Powered X-Ray App | DeepNude</a></li><li><a href="https://www.draw.io" target="_blank" rel="noopener">Flowchart Maker &amp; Online Diagram Software</a></li><li><a href="https://www.mindmeister.com/zh" target="_blank" rel="noopener">在线思维导图－在线头脑风暴会议</a></li><li><a href="http://www.autopiano.cn" target="_blank" rel="noopener">自由钢琴 - AutoPiano</a></li><li><a href="https://tableconvert.com" target="_blank" rel="noopener">Table Convert Online - table to markdown,csv,json,latex table,excel,sql,xml</a></li><li><a href="https://www.animatedknots.com/complete-knot-list" target="_blank" rel="noopener">Complete Knot List | Alphabetical list of all Knots | Animated Knots by Grog</a></li><li><a href="https://house-map.cn/" target="_blank" rel="noopener">地图搜租房</a></li><li><a href="https://www.heduian.run/" target="_blank" rel="noopener">河对岸云服务</a></li><li><a href="https://automagica.readthedocs.io/#image-operations" target="_blank" rel="noopener">桌面Python-API</a></li><li><a href="https://www.hi2future.com" target="_blank" rel="noopener">时光邮局</a></li><li><a href="https://www.soundsnap.com" target="_blank" rel="noopener">Download Sound Effects</a></li><li><a href="https://cybermap.kaspersky.com" target="_blank" rel="noopener">MAP | Anti-Detection</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://miku.tools&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MikuTools - 一个轻量的工具集合&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.toolfk.com&quot; tar
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Fantasy</title>
+    <link href="https://congoliver.github.io/2019/06/02/Fantasy/"/>
+    <id>https://congoliver.github.io/2019/06/02/Fantasy/</id>
+    <published>2019-06-02T01:13:21.000Z</published>
+    <updated>2019-06-26T07:54:22.174Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>Use the money to make more money.   — Virtuous cycle.</li><li>Work until your bank account looks like a phone number.</li><li>Think like a billionaire, hustle like your are broke.</li><li>Money is the oxygen of capitalism and I wanna breathe more than any man alive.</li><li>If you do not find a way to make money while you sleep, you will work until you die.</li><li>Be fearful when others are greedy and be greedy when others are fearful.</li><li>You have  got  to tell your money what to do or it will leave.</li><li>Stop buying things you do not need to impress people you do not even like.</li><li>The quickest way to double your money is to fold it over and put it back in your packet.</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;Use the money to make more money.   — Virtuous cycle.&lt;/li&gt;
+&lt;li&gt;Work until your bank account looks like a phone number.&lt;/li&gt;
+&lt;li&gt;Thi
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Spaceship</title>
+    <link href="https://congoliver.github.io/2019/05/23/Spaceship/"/>
+    <id>https://congoliver.github.io/2019/05/23/Spaceship/</id>
+    <published>2019-05-23T08:18:21.000Z</published>
+    <updated>2019-09-06T09:30:01.768Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="https://github.com/fastlane/fastlane/tree/master/spaceship" target="_blank" rel="noopener">Spaceshop</a>公开了<a href="https://github.com/fastlane/fastlane/blob/master/spaceship/docs/DeveloperPortal.md" target="_blank" rel="noopener">Apple Developer Center API</a>和<a href="https://github.com/fastlane/fastlane/blob/master/spaceship/docs/AppStoreConnect.md" target="_blank" rel="noopener">App Store Connect API</a>，使得繁琐的Web操作可以通过Ruby脚本达到同样的目的。  </p></blockquote><a id="more"></a><h3 id="Sign-a-lot-of-devices"><a href="#Sign-a-lot-of-devices" class="headerlink" title="Sign a lot of devices"></a>Sign a lot of devices</h3><p><img src="/2019/05/23/Spaceship/sign.png" alt="sign"></p><ul><li>Ruby environment on MacOS</li><li>Install Spaceship  <code>$ sudo gem install spaceship -n /usr/local/bin</code> </li><li>Prepare a file (Devices.txt) to collect device UDID</li><li>Write ruby script and excute <code>$ ruby &lt;rb-path&gt;</code></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">require &apos;spaceship&apos;</span><br><span class="line">require &apos;pathname&apos;</span><br><span class="line"></span><br><span class="line">Spaceship::Portal.login(&quot;account&quot;, &quot;password&quot;)</span><br><span class="line">Spaceship::Tunes.login(&apos;account&apos;, &apos;password&apos;)</span><br><span class="line"># app = Spaceship::Application.find(&quot;&quot;)</span><br><span class="line"></span><br><span class="line"># 批量注册测试设备</span><br><span class="line">def SignDevices()</span><br><span class="line">currentPath = Pathname.new(__FILE__).realpath.to_s</span><br><span class="line">devicePath = &quot;#&#123;currentPath.chomp(&quot;/Sign.rb&quot;)&#125;/Devices.txt&quot;</span><br><span class="line">File.open(devicePath,&quot;r&quot;).each_line do |udid|</span><br><span class="line">Spaceship::Portal.device.create!(name: &quot;iPhone&quot;, udid: udid)</span><br><span class="line">end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line"># 执行</span><br><span class="line">SignDevices()</span><br></pre></td></tr></table></figure><h3 id="Add-all-available-devices-to-the-profile"><a href="#Add-all-available-devices-to-the-profile" class="headerlink" title="Add all available devices to the profile"></a>Add all available devices to the profile</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">require &apos;spaceship&apos;</span><br><span class="line"></span><br><span class="line">Spaceship::Portal.login(&quot;account&quot;, &quot;password&quot;)</span><br><span class="line">Spaceship::Tunes.login(&apos;account&apos;, &apos;password&apos;)</span><br><span class="line"></span><br><span class="line"># 将所有设备加入配置文件并下载</span><br><span class="line">def ResetProfile()</span><br><span class="line"># devProfile = Spaceship::Portal.provisioning_profile.development.all.find &#123; |p| p.name == &quot;Name&quot; &#125;</span><br><span class="line"># devProfile.devices = Spaceship::Portal.device.all</span><br><span class="line"># dev_profile_content = devProfile.first.download</span><br><span class="line">adhocPorfile = Spaceship::Portal.provisioning_profile.ad_hoc.all.find &#123; |p| p.name == &quot;Name&quot; &#125;</span><br><span class="line">adhocPorfile.devices = Spaceship::Portal.device.all</span><br><span class="line">adhoc_profile_content = adhocPorfile.first.download</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">ResetProfile()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fastlane/fastlane/tree/master/spaceship&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Spaceshop&lt;/a&gt;公开了&lt;a href=&quot;https://github.com/fastlane/fastlane/blob/master/spaceship/docs/DeveloperPortal.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Apple Developer Center API&lt;/a&gt;和&lt;a href=&quot;https://github.com/fastlane/fastlane/blob/master/spaceship/docs/AppStoreConnect.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;App Store Connect API&lt;/a&gt;，使得繁琐的Web操作可以通过Ruby脚本达到同样的目的。  &lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+APlayer</title>
+    <link href="https://congoliver.github.io/2019/05/06/Hexo+APlayer/"/>
+    <id>https://congoliver.github.io/2019/05/06/Hexo+APlayer/</id>
+    <published>2019-05-06T06:40:39.000Z</published>
+    <updated>2019-08-24T05:35:39.780Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>这篇写如何给Hexo博客系统集成音乐播放器。 音乐赋予每个人不一样的感官体验，博客加入BGM，或许能带来不一样的音乐记忆。</p></blockquote><a id="more"></a><h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><ul><li>下载 <a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">APlayer</a>解压后拷贝dist文件夹粘贴至本地Hexo路径<em>themes</em>当前主题/source 路径之下</li><li>dist路径下创建music.js，自定义播放器设置<a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">APlayer 中文文档</a>及音乐资源，audio.url可通过<a href="https://music.liuzhijin.cn" target="_blank" rel="noopener">音乐直链搜索</a>+网易云音乐外链格式规范 <a href="http://music.163.com/song/media/outer/url?id=xxx.mp3" target="_blank" rel="noopener">http://music.163.com/song/media/outer/url?id=xxx.mp3</a> 拼接得到，audio.cover通过检查网页源码得到链接</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const ap = new APlayer(&#123;</span><br><span class="line">container: document.getElementById(&apos;aplayer&apos;),</span><br><span class="line">fixed: true,</span><br><span class="line">autoplay: false,</span><br><span class="line">audio: [&#123;</span><br><span class="line">name: &apos;The Rain&apos;,</span><br><span class="line">artist: &apos;久石譲&apos;,</span><br><span class="line">url: &apos;http://music.163.com/song/media/outer/url?id=444312.mp3&apos;,</span><br><span class="line">cover: &apos;http://p1.music.126.net/m77bQUkQHORPcWW61xSMsQ==/2515682604414740.jpg?param=300x300&apos;</span><br><span class="line">&#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><ul><li>在当前主题_partial文件夹下footer.swig中注入代码，也可以放置其他位置(主题差异会导致layout路径略不相同)</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;/dist/APlayer.min.css&quot;&gt;</span><br><span class="line">&lt;div id=&quot;aplayer&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/APlayer.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/dist/music.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;div class=&quot;copyright&quot;&gt;</span><br></pre></td></tr></table></figure><ul><li>重新发布 <code>hexo g -d</code> ，成功后若播放错误导致一直Skip则为音乐外链问题。</li></ul><hr><blockquote><p>thanks for your reading~  </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;这篇写如何给Hexo博客系统集成音乐播放器。 音乐赋予每个人不一样的感官体验，博客加入BGM，或许能带来不一样的音乐记忆。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Custom-Camera-UI</title>
+    <link href="https://congoliver.github.io/2019/05/02/Custom-Camera-UI/"/>
+    <id>https://congoliver.github.io/2019/05/02/Custom-Camera-UI/</id>
+    <published>2019-05-02T01:13:21.000Z</published>
+    <updated>2019-05-02T01:14:43.474Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>应用中构建自定义相机UI捕获媒体需要用到<a href="https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture?language=objc#overview" target="_blank" rel="noopener">AVFoundation Capture</a><br>应用中调用系统相机UI捕获媒体则用到 <a href="https://developer.apple.com/documentation/uikit/uiimagepickercontroller?language=objc" target="_blank" rel="noopener">UIImagePickerController</a></p></blockquote><a id="more"></a><p><img src="/2019/05/02/Custom-Camera-UI/Capture.png" alt=""></p><h3 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h3><blockquote><p>捕获体系结构的主要部分是会话，输入和输出：捕获会话将一个或多个输入连接到一个或多个输出。输入是媒体源，包括内置于iOS设备或Mac中的摄像头和麦克风等捕获设备。输出从输入获取媒体以产生有用的数据，例如写入磁盘的电影文件或可用于实时处理的原始像素缓冲区。  </p><ul><li>检查授权<a href="https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/requesting_authorization_for_media_capture_on_ios?language=objc" target="_blank" rel="noopener">Requesting Authorization for Media Capture</a></li><li>创建媒体捕捉会话</li><li>创建媒体输入并添加入捕捉会话</li><li>创建媒体输出并添加入捕捉会话</li><li>创建媒体预览视图，并设置其会话</li><li>捕捉会话开始工作</li><li>调用输出API进行拍摄<br>ps—设置媒体输入&amp;输出&amp;媒体预览视图时可根据需求初始化相关基本设置，e.g.前后置镜头&amp;前置摄像头镜像翻转&amp;视频重力</li></ul></blockquote><hr><h3 id="Custom-Camera-UI"><a href="#Custom-Camera-UI" class="headerlink" title="Custom-Camera-UI"></a>Custom-Camera-UI</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">#import &lt;AVFoundation/AVFoundation.h&gt;</span><br><span class="line">@interface ZBPreview : UIView</span><br><span class="line">@property (nonatomic, readonly) AVCaptureVideoPreviewLayer *videoPreviewLayer;</span><br><span class="line">@property (nonatomic, strong) AVCaptureSession *captureSession;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">#import &quot;ZBPreview.h&quot;</span><br><span class="line">@implementation ZBPreview</span><br><span class="line">- (void)awakeFromNib &#123;</span><br><span class="line">    [super awakeFromNib];</span><br><span class="line">   //保留视频的宽高比并填充图层的边界</span><br><span class="line">    [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (instancetype)initWithFrame:(CGRect)frame &#123;</span><br><span class="line">    if (self = [super initWithFrame:frame]) &#123;</span><br><span class="line">        [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspectFill];</span><br><span class="line">    &#125;</span><br><span class="line">    return self;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (Class)layerClass &#123;</span><br><span class="line">    return [AVCaptureVideoPreviewLayer class];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (AVCaptureVideoPreviewLayer*)videoPreviewLayer &#123;</span><br><span class="line">    return (AVCaptureVideoPreviewLayer *)self.layer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (AVCaptureSession*)captureSession &#123;</span><br><span class="line">    return self.videoPreviewLayer.session;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)setCaptureSession:(AVCaptureSession*)captureSession &#123;</span><br><span class="line">    self.videoPreviewLayer.session = captureSession;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">#import &quot;ZBPreview.h&quot;</span><br><span class="line">@class ZBOverlayView;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@protocol ZBOverlayViewDelegate &lt;NSObject&gt;</span><br><span class="line">@optional</span><br><span class="line">- (void)overlayViewActionTakePicture:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionClickedAlbum:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionCancelCamera:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionSwitchCamera:(ZBOverlayView *)overlayView;</span><br><span class="line">- (void)overlayViewActionExitCamera:(ZBOverlayView *)overlayView;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">//相机UI视图</span><br><span class="line">@interface ZBOverlayView : UIView</span><br><span class="line">///预览相机视图</span><br><span class="line">@property (weak, nonatomic) IBOutlet ZBPreview *previewView;</span><br><span class="line">///拍摄图片视图</span><br><span class="line">@property (weak, nonatomic) IBOutlet UIImageView *previewPicture;</span><br><span class="line">///UI操作代理</span><br><span class="line">@property (nonatomic, weak) id&lt;ZBOverlayViewDelegate&gt; delegate;</span><br><span class="line">+ (instancetype)cameraView;</span><br><span class="line">- (UIView *)targetView;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#import &quot;ZBOverlayView.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation ZBOverlayView</span><br><span class="line"></span><br><span class="line">+ (instancetype)cameraView &#123;</span><br><span class="line">    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;</span><br><span class="line">&#125;</span><br><span class="line">//放置拍摄显示照片</span><br><span class="line">- (UIView *)targetView &#123;</span><br><span class="line">    return nil;</span><br><span class="line">&#125;</span><br><span class="line">//返回</span><br><span class="line">- (IBAction)backButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionExitCamera:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionExitCamera:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//拍摄</span><br><span class="line">- (IBAction)takeButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionTakePicture:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionTakePicture:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//取消</span><br><span class="line">- (IBAction)cancelButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionCancelCamera:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionCancelCamera:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//相册</span><br><span class="line">- (IBAction)doneButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionClickedAlbum:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionClickedAlbum:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//切换镜头</span><br><span class="line">- (IBAction)positionButtonClicked:(id)sender &#123;</span><br><span class="line">    if ([self.delegate respondsToSelector:@selector(overlayViewActionSwitchCamera:)]) &#123;</span><br><span class="line">        [self.delegate overlayViewActionSwitchCamera:self];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure><p>via-<a href="https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/avcam_building_a_camera_app?language=objc" target="_blank" rel="noopener">AVCam: Building a Camera App</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;应用中构建自定义相机UI捕获媒体需要用到&lt;a href=&quot;https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture?language=objc#overview&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AVFoundation Capture&lt;/a&gt;&lt;br&gt;应用中调用系统相机UI捕获媒体则用到 &lt;a href=&quot;https://developer.apple.com/documentation/uikit/uiimagepickercontroller?language=objc&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;UIImagePickerController&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Storyboard&amp;Xib</title>
+    <link href="https://congoliver.github.io/2019/04/16/Storyboard&amp;Xib/"/>
+    <id>https://congoliver.github.io/2019/04/16/Storyboard&amp;Xib/</id>
+    <published>2019-04-16T03:18:21.000Z</published>
+    <updated>2019-08-24T05:35:51.450Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Storyboard一直是Apple推崇的构建UI方式，相比纯代码更加高效，免去了冗长的约束，实际上Storyboard也可以很优雅，配合无线调试更是不要太方便。</p></blockquote><a id="more"></a><ul><li>一个项目中，<em>Storyboard</em>不该是孤立存在的，每个模块独立<em>Storyboard</em>，每个页面都有独立的<em>Storyboard</em>，每个<em>Storyboard</em>只应该有一个主_VC_和同页的子_VC_，主_VC_不应存在2个以上。（绝大多数情况下，一个<em>Storyboard</em>上只应该有一个_VC_）。</li><li>页面间的Segue连线应该使用<em>Storyboard Reference Scene</em>，<em>UITabBarController</em>的子页因为复杂度应该当成主_VC_处置。</li><li>视图的初始样式应尽量在<em>Storyboard</em>上属性面板中设置，非极特殊情况，布局也应在<em>Storyboard</em>上使用各种约束配合完成。这样有利于视图样式和视图代码分离，有利于视图代码重用性和兼容性提高。</li><li>对于逻辑复杂的_VC_，每个Storyboard只应该有一个主VC和同页的子VC，主VC不应存在2个以上，应添加Object对象或者<em>Embed Segue ChildViewController</em>，并绑定相应的类来分离逻辑代码。</li><li>对于圆角，背景色，阴影等CALayer的样式，应该使用扩展或子类化实例的形式，使用@IBInspectable_IBInspectable属性关键字，在_Storyboard/属性面板中设定初始样式。</li><li>对于自定义视图，应使用@IBDesignable_IB_DESIGNABLE关键字保障在_Storyboard&amp;Xib/上所见即所得。</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">IB_DESIGNABLE</span><br><span class="line">@interface UIView (MOT)</span><br><span class="line">@property(nonatomic,assign) IBInspectable CGFloat cornerRadius;</span><br><span class="line">@property(nonatomic,assign) IBInspectable CGFloat borderWidth;</span><br><span class="line">@property(nonatomic,assign) IBInspectable UIColor *borderColor;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">// .m</span><br><span class="line">#import &quot;UIView+MGO.h&quot;</span><br><span class="line">@implementation UIView (MOT)</span><br><span class="line">-(void)setCornerRadius:(CGFloat)cornerRadius&#123;</span><br><span class="line">    self.layer.masksToBounds = YES;</span><br><span class="line">    self.layer.cornerRadius = cornerRadius;</span><br><span class="line">&#125;</span><br><span class="line">-(void)setBorderColor:(UIColor *)borderColor&#123;</span><br><span class="line">    self.layer.borderColor = borderColor.CGColor;</span><br><span class="line">&#125;</span><br><span class="line">-(void)setBorderWidth:(CGFloat)borderWidth&#123;</span><br><span class="line">    self.layer.borderWidth = borderWidth;</span><br><span class="line">&#125;</span><br><span class="line">-(CGFloat)cornerRadius&#123;</span><br><span class="line">    return self.layer.cornerRadius;</span><br><span class="line">&#125;</span><br><span class="line">-(CGFloat)borderWidth&#123;</span><br><span class="line">    return self.layer.borderWidth;</span><br><span class="line">&#125;</span><br><span class="line">-(UIColor *)borderColor&#123;</span><br><span class="line">    return [UIColor colorWithCGColor:self.layer.borderColor];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><blockquote><p>via:<a href="https://juejin.im/post/5c468f676fb9a049ed313183" target="_blank" rel="noopener">StoryBoard 多人协作技巧 </a><br>thanks for your reading~  </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;Storyboard一直是Apple推崇的构建UI方式，相比纯代码更加高效，免去了冗长的约束，实际上Storyboard也可以很优雅，配合无线调试更是不要太方便。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>AutoFill</title>
+    <link href="https://congoliver.github.io/2019/04/11/AutoFill&amp;Animation&amp;Graphics/"/>
+    <id>https://congoliver.github.io/2019/04/11/AutoFill&amp;Animation&amp;Graphics/</id>
+    <published>2019-04-11T05:18:28.000Z</published>
+    <updated>2019-08-24T05:36:17.690Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><em>App</em>中如何使得用戶注册登錄更加方便，除了支持第三方登錄外，還可以適配自动填充(<em>iOS11</em>以上)功能，使得賬號_密碼_驗證碼直接現在鍵盤<em>QuickType bar</em>上面，用戶點擊后直接填充在應用的賬號、密碼、验证码輸入框，免去了思考和手動輸入的阻碍。</p></blockquote><a id="more"></a><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><ul><li>iOS 11+</li><li>設置—密碼與賬戶—打開自動填充密碼<h3 id="textContentType"><a href="#textContentType" class="headerlink" title="textContentType"></a>textContentType</h3></li><li>使用原生控件<em>UITextField</em> 和<em>UITextView</em>，或者遵循<em>UITextInput</em>的控件，并且设置其<em>textContentType</em>为指定类别</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">self.accountTextField.textContentType = UITextContentTypeUsername;</span><br><span class="line">self.passwordTextField.textContentType = UITextContentTypePassword;</span><br><span class="line">self.onecodeTextField.textContentType = UITextContentTypeOneTimeCode;</span><br><span class="line">self.newpasswordField.textContentType = UITextContentTypeNewPassword;//for Automatic Strong Passwords</span><br></pre></td></tr></table></figure><h3 id="Associated-Domains"><a href="#Associated-Domains" class="headerlink" title="Associated Domains"></a>Associated Domains</h3><ul><li><a href="https://idmsa.apple.com/IDMSWebAuth/signin" target="_blank" rel="noopener">开发者后台</a>设置Associated Domains Enable</li><li>记录Prefix和app的BundleID,生成名为<em>apple-app-site-association</em>的文件,放到关联域网站服务器的<em>.well-known</em>目录下面或者根目录下</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;webcredentials&quot;:&#123;</span><br><span class="line">        &quot;apps&quot;:[&quot;Prefix.BundleID&quot;] </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>项目中设置 Target—Capabilities—Associated Domains 开启，且添加Domains:  webcredentials:example.com  —支持https的关联域网站域名</li></ul><blockquote><p>thanks for your reading~  </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;App&lt;/em&gt;中如何使得用戶注册登錄更加方便，除了支持第三方登錄外，還可以適配自动填充(&lt;em&gt;iOS11&lt;/em&gt;以上)功能，使得賬號_密碼_驗證碼直接現在鍵盤&lt;em&gt;QuickType bar&lt;/em&gt;上面，用戶點擊后直接填充在應用的賬號、密碼、验证码輸入框，免去了思考和手動輸入的阻碍。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>aesthetic-feeling</title>
+    <link href="https://congoliver.github.io/2019/04/10/aesthetic-feeling/"/>
+    <id>https://congoliver.github.io/2019/04/10/aesthetic-feeling/</id>
+    <published>2019-04-10T06:25:21.000Z</published>
+    <updated>2019-06-29T09:08:55.083Z</updated>
+    
+    <content type="html"><![CDATA[<p>愿意在生活中追求美的东西，because I care，because I care about myself。</p><a id="more"></a><p><img src="/2019/04/10/aesthetic-feeling/aesthetic.jpeg" alt="1"></p><hr><p>/如果记忆有颜色/<br><img src="/2019/04/10/aesthetic-feeling/color.jpeg" alt="2"><br>/生活里的野餐课/<br><img src="/2019/04/10/aesthetic-feeling/life.jpeg" alt="3"><br>/美感教科书/<br><img src="/2019/04/10/aesthetic-feeling/book.jpeg" alt="4"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;愿意在生活中追求美的东西，because I care，because I care about myself。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Recently-Finds</title>
+    <link href="https://congoliver.github.io/2019/04/03/Recently-Finds/"/>
+    <id>https://congoliver.github.io/2019/04/03/Recently-Finds/</id>
+    <published>2019-04-03T06:15:21.000Z</published>
+    <updated>2019-08-30T02:42:08.130Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://github.com/MediaBrowser/Emby" target="_blank" rel="noopener">Emby</a> 個人媒體服務</li><li><a href="https://play.google.com/store/apps/details?id=org.xbmc.kodi" target="_blank" rel="noopener">kodi</a> TV端本地播放器</li><li>迪士尼有一個工作的職稱是「夢想工程師」(Imagineer)，他們主要負責的就是把那些天馬行空的想法和點子落實在產品或服務上</li><li>Two SawBooks — STEAL LIKE AN ARTIST &amp;&amp; SHOW YOUR WORK！</li><li><a href="https://melodyliao.cc/307/%E6%9B%B8%E6%91%98-%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E9%80%99%E6%A8%A3%E7%94%9F%E6%B4%BB%EF%BC%8C%E9%82%A3%E6%A8%A3%E5%B7%A5%E4%BD%9C" target="_blank" rel="noopener">About Habits</a> 一篇博客</li><li><a href="https://github.com/cnlh/nps" target="_blank" rel="noopener">nps</a>  輕量級、功能強大的內網穿透代理服務</li><li><a href="https://github.com/AweiLoveAndroid/Flutter-learning" target="_blank" rel="noopener">Flutter-learning</a> 个人觉得最好的Flutter入门類DEMO</li><li><a href="https://github.com/IdeasOnCanvas/Aiolos" target="_blank" rel="noopener">Aiolos</a> iOS開源思維導圖庫</li><li><a href="http://modelend.com" target="_blank" rel="noopener">ModelEnd</a> convert JSON to model object</li><li><a href="https://carbon.now.sh/" target="_blank" rel="noopener">Carbon</a> convert Code to PNG</li><li><a href="http://www.bitdock.cn" target="_blank" rel="noopener">bitdock</a> Windows任務欄-模仿macOS</li><li><a href="https://webtorrent.io/desktop/" target="_blank" rel="noopener">WebTorrent</a> 邊下邊播BT下載器</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MediaBrowser/Emby&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Emby&lt;/a&gt; 個人媒體服務&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://play.google
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>scoped_model</title>
+    <link href="https://congoliver.github.io/2019/03/22/scoped_model/"/>
+    <id>https://congoliver.github.io/2019/03/22/scoped_model/</id>
+    <published>2019-03-22T08:18:21.000Z</published>
+    <updated>2019-03-23T07:07:11.646Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><a href="https://pub.dartlang.org/packages/scoped_model" target="_blank" rel="noopener">scoped_model </a> is a third-part Flutter Package，allow you to easily pass a data Model from a parent Widget down to it’s descendants.</p></blockquote><a id="more"></a><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><ol><li><p>首先创建一个继承Model的类，这个类的作用是保持Widget的state，修改数据后调用notifyListeners；</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:scoped_model/scoped_model.dart&apos;;</span><br><span class="line">class CounterModel extends Model &#123;</span><br><span class="line">  int _counter = 0;</span><br><span class="line">  int get counter =&gt; _counter;</span><br><span class="line">  void increment() &#123;</span><br><span class="line">    /// First, increment the counter/</span><br><span class="line">    _counter++;</span><br><span class="line">    /// Then notify all the listeners./</span><br><span class="line">    notifyListeners();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>ScopedModel是一个带model和child参数的Widget，用于初始化并传递创建好的Model类，包裹于其中的页面StatelessWidget相当于Listeners；</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class MyApp extends StatelessWidget &#123;</span><br><span class="line">  final CounterModel model;</span><br><span class="line">  const MyApp(&#123;Key key,@required this.model&#125;):super(key:key);</span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return ScopedModel(</span><br><span class="line">      model: model,</span><br><span class="line">      child: MaterialApp(</span><br><span class="line">        title: &apos;scoped model demo&apos;,</span><br><span class="line">        home: CountPage(),</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>包裹于ScopedModelDescendant的Widget用于操作Model的数据(增删改查)；另外一种获取方式是在重写build函数中通过<code>final username = ScopedModel.of&lt;UserModel&gt;(context，rebuildOnChange: true).username;</code>获取数据</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">import &apos;package:flutter/material.dart&apos;;</span><br><span class="line">import &apos;package:scoped_model/scoped_model.dart&apos;;</span><br><span class="line">import &apos;package:flutter_temperate/models/counter_model.dart&apos;;</span><br><span class="line">import &apos;package:flutter_temperate/ui/result_page.dart&apos;;</span><br><span class="line"></span><br><span class="line">class CountPage extends StatelessWidget &#123;</span><br><span class="line">  @override</span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    return Scaffold(</span><br><span class="line">      appBar: AppBar(</span><br><span class="line">        title: Text(&apos;scoped model&apos;),</span><br><span class="line">        backgroundColor: Colors.purple,</span><br><span class="line">        actions: &lt;Widget&gt;[</span><br><span class="line">          IconButton(tooltip: &apos;to result&apos;,icon: Icon(Icons.rotate_right),onPressed: ()&#123;</span><br><span class="line">            Navigator.push(context, MaterialPageRoute(builder: (context) =&gt; ResultPage()));</span><br><span class="line">          &#125;,)</span><br><span class="line">        ],</span><br><span class="line">      ),</span><br><span class="line"></span><br><span class="line">      body: Center(</span><br><span class="line">        child: Column(</span><br><span class="line">          mainAxisAlignment: MainAxisAlignment.center,</span><br><span class="line">          children: &lt;Widget&gt;[</span><br><span class="line">            Text(&apos;touch&apos;),</span><br><span class="line">            ScopedModelDescendant&lt;CounterModel&gt;(</span><br><span class="line">              builder: (context,child,model)&#123;</span><br><span class="line">                return Text(&apos;$&#123;model.counter.toString()&#125; times&apos;,style: TextStyle(</span><br><span class="line">                  color: Colors.red,fontSize: 33.0,</span><br><span class="line">                ),);</span><br><span class="line">              &#125;,</span><br><span class="line">            ),</span><br><span class="line">          ],</span><br><span class="line">        ),</span><br><span class="line">      ),</span><br><span class="line"></span><br><span class="line">      floatingActionButton: ScopedModelDescendant&lt;CounterModel&gt;(</span><br><span class="line">        builder: (context,child,model)&#123;</span><br><span class="line">          return FloatingActionButton(</span><br><span class="line">            onPressed: model.increment,</span><br><span class="line">            tooltip: &apos;add&apos;,</span><br><span class="line">            child: Icon(Icons.add),</span><br><span class="line">          );</span><br><span class="line">        &#125;,</span><br><span class="line">      ),</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ol><blockquote><p>Flutter状态管理的方式有很多，StatelessWidget(原生)、bloc、redux、rxdart，各有优劣，但是选择适合自己的很重要。thanks for your reading~  </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://pub.dartlang.org/packages/scoped_model&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;scoped_model &lt;/a&gt; is a third-part Flutter Package，allow you to easily pass a data Model from a parent Widget down to it’s descendants.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>TouchID&amp;&amp;FaceID</title>
+    <link href="https://congoliver.github.io/2019/03/19/TouchID&amp;&amp;FaceID/"/>
+    <id>https://congoliver.github.io/2019/03/19/TouchID&amp;&amp;FaceID/</id>
+    <published>2019-03-19T03:18:21.000Z</published>
+    <updated>2019-03-22T08:54:08.760Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>由于接下来的项目需要接触到触控ID以及面容ID支付，发现API调用简单但是支付宝微信等还做了新旧录用信息对比<em>evaluatedPolicyDomainState</em>的逻辑(或许不是这么简单)，so简单封装一下。</p></blockquote><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line">////////// .h file</span><br><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">@interface LocalAuthManager : NSObject</span><br><span class="line">+ (instancetype)sharedInstance;</span><br><span class="line">- (BOOL)isSupportTouchID;</span><br><span class="line">- (BOOL)isSupportFaceID;</span><br><span class="line">- (void)showAuthIDWithDescribe:(NSString *)describe block:(void (BOOL success, NSError * _Nullable error))block;</span><br><span class="line">- (void)setCurrentUserAuthDataWithIdentity:(NSString *)identity;</span><br><span class="line">- (NSData *)currentUserAuthData:(NSString *)identity;</span><br><span class="line">@end</span><br><span class="line">////////.m file</span><br><span class="line">#import &quot;LocalAuthManager.h&quot;</span><br><span class="line">#import &lt;LocalAuthentication/LocalAuthentication.h&gt;</span><br><span class="line">#import &quot;SAMKeychain.h&quot;</span><br><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line"></span><br><span class="line">#define iPhoneX (UIScreen.mainScreen.bounds.size.width &gt;= 375.f &amp;&amp; UIScreen.mainScreen.bounds.size.height &gt;= 812.f)</span><br><span class="line">#define Auth_ID_DATA_SERVICE @&quot;Auth_ID_DATA_SERVICE&quot;</span><br><span class="line"></span><br><span class="line">@implementation LocalAuthManager</span><br><span class="line"></span><br><span class="line">static LocalAuthManager *_instance;</span><br><span class="line"></span><br><span class="line">#pragma mark - 单例</span><br><span class="line">+ (instancetype)sharedInstance &#123;</span><br><span class="line">    static dispatch_once_t onceToken;</span><br><span class="line">    dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">        if (_instance == nil) &#123;</span><br><span class="line">            _instance = [[super allocWithZone:NULL] init];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    return _instance;</span><br><span class="line">&#125;</span><br><span class="line">+(instancetype)allocWithZone:(struct _NSZone *)zone</span><br><span class="line">&#123;</span><br><span class="line">    return [self sharedInstance];</span><br><span class="line">&#125;</span><br><span class="line">-(id)copyWithZone:(NSZone *)zone</span><br><span class="line">&#123;</span><br><span class="line">    return _instance;</span><br><span class="line">&#125;</span><br><span class="line">-(id)mutableCopyWithZone:(NSZone *)zone</span><br><span class="line">&#123;</span><br><span class="line">    return _instance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#pragma mark - 判断是否支持触控ID</span><br><span class="line">- (BOOL)isSupportTouchID&#123;</span><br><span class="line">    LAContext *laContext = [[LAContext alloc] init];</span><br><span class="line">    NSError *error = nil;</span><br><span class="line">    //LAPolicyDeviceOwnerAuthenticationWithBiometrics判断TouchID和FaceID</span><br><span class="line">    [laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error];</span><br><span class="line">    if (error.code == LAErrorTouchIDNotAvailable)</span><br><span class="line">        return NO;</span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 判断是否支持面容ID</span><br><span class="line">- (BOOL)isSupportFaceID&#123;</span><br><span class="line">    if (iPhoneX &amp;&amp; [UIDevice currentDevice].systemVersion.doubleValue &gt;= 11.0)</span><br><span class="line">        return YES;</span><br><span class="line">    return NO;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 显示验证</span><br><span class="line">- (void)showAuthIDWithDescribe:(NSString *)describe block:(void (BOOL success, NSError * _Nullable error))block&#123;</span><br><span class="line">    if (!describe) &#123;</span><br><span class="line">        if (iPhoneX) &#123;</span><br><span class="line">            describe = @&quot;验证已有面容&quot;;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            describe = @&quot;通过Home键验证已有指纹&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    if (NSFoundationVersionNumber &lt; NSFoundationVersionNumber_iOS_8_0) &#123;</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            NSLog(@&quot;系统版本低于8.0&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    LAContext *context = [[LAContext alloc] init];</span><br><span class="line">    NSError *error;</span><br><span class="line">    context.localizedFallbackTitle = @&quot;输入密码&quot;;</span><br><span class="line">    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) &#123;</span><br><span class="line">        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:describe reply:^(BOOL success, NSError * _Nullable error) &#123;</span><br><span class="line">            block(success,error);</span><br><span class="line">        &#125;];</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            NSLog(@&quot;当前设备不支持TouchID/FaceID&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 根据当前用户标识的保存TouchID/FaceID信息</span><br><span class="line">- (void)setCurrentUserAuthDataWithIdentity:(NSString *)identity &#123;</span><br><span class="line">    LAContext *context = [[LAContext alloc] init];</span><br><span class="line">    NSError *error;</span><br><span class="line">    if (![context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&amp;error]) &#123;</span><br><span class="line">        NSLog(@&quot;save authe error:%@&quot;,error);</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    if (identity &amp;&amp; context.evaluatedPolicyDomainState) &#123;</span><br><span class="line">        [SAMKeychain setPasswordData:context.evaluatedPolicyDomainState forService:Auth_ID_DATA_SERVICE account:identity error:&amp;error];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">#pragma mark - 根据当前用户标识的获取TouchID/FaceID信息</span><br><span class="line">- (NSData *)currentUserAuthData:(NSString *)identity &#123;</span><br><span class="line">    return [SAMKeychain passwordDataForService:Auth_ID_DATA_SERVICE account:identity];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">typedef NS_ENUM(NSInteger, LAError)</span><br><span class="line">&#123;</span><br><span class="line">    LAErrorAuthenticationFailed,   // 验证信息出错</span><br><span class="line">    LAErrorUserCancel              // 用户取消了验证</span><br><span class="line">    LAErrorUserFallback            // 用户点击了手动输入密码的按钮</span><br><span class="line">    LAErrorSystemCancel            // 被系统取消，就是说你现在进入别的应用了，不在刚刚那个页面，所以没法验证</span><br><span class="line">    LAErrorPasscodeNotSet          // 用户没有设置文本密码</span><br><span class="line">    LAErrorTouchIDNotAvailable     // 用户设备不支持TouchID</span><br><span class="line">    LAErrorTouchIDNotEnrolled      // 用户没有设置手指指纹</span><br><span class="line">    LAErrorTouchIDLockout          // 用户错误次数被锁了</span><br><span class="line">    LAErrorAppCancel               // 在验证中被其他app中断</span><br><span class="line">    LAErrorInvalidContext          // 请求验证出错</span><br><span class="line">    LAErrorBiometryNotAvailable    // 多次验证(T&amp;F二者)失败被锁定</span><br><span class="line">    LAErrorBiometryNotEnrolled     // 用户没有设置触控ID、面容ID</span><br><span class="line">    LAErrorBiometryLockout         // 触控ID、面容ID被锁了</span><br><span class="line">    LAErrorNotInteractive          // 验证失败，使用了禁止UI</span><br><span class="line">&#125; NS_ENUM_AVAILABLE(10_10, 8_0) __WATCHOS_AVAILABLE(3.0) __TVOS_AVAILABLE(10.0);</span><br></pre></td></tr></table></figure><blockquote><p>thanks for your reading~  </p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;由于接下来的项目需要接触到触控ID以及面容ID支付，发现API调用简单但是支付宝微信等还做了新旧录用信息对比&lt;em&gt;evaluatedPolicyDomainState&lt;/em&gt;的逻辑(或许不是这么简单)，so简单封装一下。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
