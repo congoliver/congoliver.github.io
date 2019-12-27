@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://congoliver.github.io/"/>
-  <updated>2019-10-21T09:24:40.878Z</updated>
+  <updated>2019-12-27T09:57:52.146Z</updated>
   <id>https://congoliver.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows-Tools</title>
+    <link href="https://congoliver.github.io/2019/12/27/Windows-Tools/"/>
+    <id>https://congoliver.github.io/2019/12/27/Windows-Tools/</id>
+    <published>2019-12-27T06:25:21.000Z</published>
+    <updated>2019-12-27T09:57:52.146Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://feem.io/" target="_blank" rel="noopener">Feem: Share Files Offline</a></li><li><a href="http://www.listary.com/" target="_blank" rel="noopener">Listary Spotlight</a></li><li><a href="https://github.com/QL-Win/QuickLook/releases" target="_blank" rel="noopener">Releases · QL-Win/QuickLook · GitHub</a></li><li><a href="https://www.microsoft.com/en-us/p/eartrumpet/9nblggh516xp?activetab=pivot:overviewtab" target="_blank" rel="noopener">Get EarTrumpet - Microsoft Store</a></li><li><a href="https://ip.sb" target="_blank" rel="noopener">IP Address Lookup / IPv4 / IPv6 - IP.SB</a></li><li><a href="https://geekuninstaller.com/" target="_blank" rel="noopener">Geek Uninstaller - the best FREE uninstaller</a></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://feem.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Feem: Share Files Offline&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.listary.com/&quot; 
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Interesting-Introdution</title>
@@ -406,29 +429,6 @@
     <summary type="html">
     
       &lt;p&gt;愿意在生活中追求美的东西，because I care，because I care about myself。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Recently-Finds</title>
-    <link href="https://congoliver.github.io/2019/04/03/Recently-Finds/"/>
-    <id>https://congoliver.github.io/2019/04/03/Recently-Finds/</id>
-    <published>2019-04-03T06:15:21.000Z</published>
-    <updated>2019-08-30T02:42:08.130Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><a href="https://github.com/MediaBrowser/Emby" target="_blank" rel="noopener">Emby</a> 個人媒體服務</li><li><a href="https://play.google.com/store/apps/details?id=org.xbmc.kodi" target="_blank" rel="noopener">kodi</a> TV端本地播放器</li><li>迪士尼有一個工作的職稱是「夢想工程師」(Imagineer)，他們主要負責的就是把那些天馬行空的想法和點子落實在產品或服務上</li><li>Two SawBooks — STEAL LIKE AN ARTIST &amp;&amp; SHOW YOUR WORK！</li><li><a href="https://melodyliao.cc/307/%E6%9B%B8%E6%91%98-%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E9%80%99%E6%A8%A3%E7%94%9F%E6%B4%BB%EF%BC%8C%E9%82%A3%E6%A8%A3%E5%B7%A5%E4%BD%9C" target="_blank" rel="noopener">About Habits</a> 一篇博客</li><li><a href="https://github.com/cnlh/nps" target="_blank" rel="noopener">nps</a>  輕量級、功能強大的內網穿透代理服務</li><li><a href="https://github.com/AweiLoveAndroid/Flutter-learning" target="_blank" rel="noopener">Flutter-learning</a> 个人觉得最好的Flutter入门類DEMO</li><li><a href="https://github.com/IdeasOnCanvas/Aiolos" target="_blank" rel="noopener">Aiolos</a> iOS開源思維導圖庫</li><li><a href="http://modelend.com" target="_blank" rel="noopener">ModelEnd</a> convert JSON to model object</li><li><a href="https://carbon.now.sh/" target="_blank" rel="noopener">Carbon</a> convert Code to PNG</li><li><a href="http://www.bitdock.cn" target="_blank" rel="noopener">bitdock</a> Windows任務欄-模仿macOS</li><li><a href="https://webtorrent.io/desktop/" target="_blank" rel="noopener">WebTorrent</a> 邊下邊播BT下載器</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/MediaBrowser/Emby&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Emby&lt;/a&gt; 個人媒體服務&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://play.google
-      
     
     </summary>
     
