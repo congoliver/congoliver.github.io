@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://congoliver.github.io/"/>
-  <updated>2020-01-20T08:18:53.173Z</updated>
+  <updated>2020-04-18T03:35:11.093Z</updated>
   <id>https://congoliver.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CAFilter</title>
+    <link href="https://congoliver.github.io/2020/04/09/CAFilter/"/>
+    <id>https://congoliver.github.io/2020/04/09/CAFilter/</id>
+    <published>2020-04-09T05:18:28.000Z</published>
+    <updated>2020-04-18T03:35:11.093Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>CAFilter是一个私有类，可以通过设置<code>layer.filters</code>实现实时滤镜效果，不过私有类API有被拒风险。</p></blockquote><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">///CAFilter</span><br><span class="line">@interface CAFilter : NSObject &lt;NSSecureCoding, NSCopying&gt;</span><br><span class="line">@property (readonly) NSString* type;</span><br><span class="line">@property (copy) NSString* name;</span><br><span class="line">@property (getter=isEnabled) BOOL enabled;</span><br><span class="line">@property BOOL cachesInputImage;</span><br><span class="line">+ (instancetype)filterWithType:(NSString *)type;</span><br><span class="line">+ (instancetype)filterWithName:(NSString *)name;</span><br><span class="line">+ (NSArray &lt;NSString *&gt; *)filterTypes;</span><br><span class="line">- (instancetype)initWithType:(id)type;</span><br><span class="line">- (instancetype)initWithName:(id)name;</span><br><span class="line">- (void)setDefaults;</span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">///五行代码实现APP黑白滤镜</span><br><span class="line">self.window.layer.filters = @[(&#123;  </span><br><span class="line">    CIFilter *filter = [NSClassFromString(@&quot;CAFilter&quot;) filterWithName:@&quot;colorSaturate&quot;];  // 看是 CIFilter，实际上是 CAFilter</span><br><span class="line">    [filter setValue:@0 forKey:@&quot;inputAmount&quot;];</span><br><span class="line">    filter;</span><br><span class="line">&#125;)];</span><br><span class="line"></span><br><span class="line">目前支持的滤镜名（iOS 13）有以下这些：</span><br><span class="line">* multiplyColor</span><br><span class="line">* colorAdd</span><br><span class="line">* colorSubtract</span><br><span class="line">* colorMonochrome</span><br><span class="line">* colorMatrix</span><br><span class="line">* colorHueRotate</span><br><span class="line">* colorSaturate参数**inputAmount**</span><br><span class="line">* colorBrightness</span><br><span class="line">* colorContrast</span><br><span class="line">* colorInvert</span><br><span class="line">* compressLuminance</span><br><span class="line">* meteor</span><br><span class="line">* luminanceToAlpha</span><br><span class="line">* bias</span><br><span class="line">* distanceField</span><br><span class="line">* gaussianBlur参数**inputRadius**</span><br><span class="line">* luminanceMap</span><br><span class="line">* luminanceCurveMap</span><br><span class="line">* curves</span><br><span class="line">* averageColor</span><br><span class="line">* lanczosResize</span><br><span class="line">* pageCurl</span><br><span class="line">* vibrantDark</span><br><span class="line">* vibrantLight</span><br><span class="line">* vibrantColorMatrix</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;CAFilter是一个私有类，可以通过设置&lt;code&gt;layer.filters&lt;/code&gt;实现实时滤镜效果，不过私有类API有被拒风险。&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>2019-Annual-Summary</title>
@@ -408,26 +428,6 @@
     
       &lt;blockquote&gt;
 &lt;p&gt;Storyboard一直是Apple推崇的构建UI方式，相比纯代码更加高效，免去了冗长的约束，实际上Storyboard也可以很优雅，配合无线调试更是不要太方便。&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>AutoFill</title>
-    <link href="https://congoliver.github.io/2019/04/11/AutoFill&amp;Animation&amp;Graphics/"/>
-    <id>https://congoliver.github.io/2019/04/11/AutoFill&amp;Animation&amp;Graphics/</id>
-    <published>2019-04-11T05:18:28.000Z</published>
-    <updated>2019-08-24T05:36:17.690Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p><em>App</em>中如何使得用戶注册登錄更加方便，除了支持第三方登錄外，還可以適配自动填充(<em>iOS11</em>以上)功能，使得賬號_密碼_驗證碼直接現在鍵盤<em>QuickType bar</em>上面，用戶點擊后直接填充在應用的賬號、密碼、验证码輸入框，免去了思考和手動輸入的阻碍。</p></blockquote><a id="more"></a><h3 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h3><ul><li>iOS 11+</li><li>設置—密碼與賬戶—打開自動填充密碼<h3 id="textContentType"><a href="#textContentType" class="headerlink" title="textContentType"></a>textContentType</h3></li><li>使用原生控件<em>UITextField</em> 和<em>UITextView</em>，或者遵循<em>UITextInput</em>的控件，并且设置其<em>textContentType</em>为指定类别</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">self.accountTextField.textContentType = UITextContentTypeUsername;</span><br><span class="line">self.passwordTextField.textContentType = UITextContentTypePassword;</span><br><span class="line">self.onecodeTextField.textContentType = UITextContentTypeOneTimeCode;</span><br><span class="line">self.newpasswordField.textContentType = UITextContentTypeNewPassword;//for Automatic Strong Passwords</span><br></pre></td></tr></table></figure><h3 id="Associated-Domains"><a href="#Associated-Domains" class="headerlink" title="Associated Domains"></a>Associated Domains</h3><ul><li><a href="https://idmsa.apple.com/IDMSWebAuth/signin" target="_blank" rel="noopener">开发者后台</a>设置Associated Domains Enable</li><li>记录Prefix和app的BundleID,生成名为<em>apple-app-site-association</em>的文件,放到关联域网站服务器的<em>.well-known</em>目录下面或者根目录下</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;webcredentials&quot;:&#123;</span><br><span class="line">        &quot;apps&quot;:[&quot;Prefix.BundleID&quot;] </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>项目中设置 Target—Capabilities—Associated Domains 开启，且添加Domains:  webcredentials:example.com  —支持https的关联域网站域名</li></ul><blockquote><p>thanks for your reading~  </p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;App&lt;/em&gt;中如何使得用戶注册登錄更加方便，除了支持第三方登錄外，還可以適配自动填充(&lt;em&gt;iOS11&lt;/em&gt;以上)功能，使得賬號_密碼_驗證碼直接現在鍵盤&lt;em&gt;QuickType bar&lt;/em&gt;上面，用戶點擊后直接填充在應用的賬號、密碼、验证码輸入框，免去了思考和手動輸入的阻碍。&lt;/p&gt;
 &lt;/blockquote&gt;
     
     </summary>
